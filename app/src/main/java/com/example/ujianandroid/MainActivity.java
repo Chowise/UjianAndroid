@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 String isian_nama_belakang = edNamaBelakang.getText().toString();
                 String isian_umur = edUmur.getText().toString();
 
-                int n = Integer.parseInt(isian_umur);
+                int int_isian_umur = Integer.parseInt(isian_umur);
 
 
                 if(isian_nama_depan.isEmpty()){
@@ -42,9 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang);
                     daftar_nama.clear();
-                    daftar_nama.add(nama_lengkap);
-                    for (int i=1; i <= n; i++){
-
+                    for (int i=1; i <= int_isian_umur; i++){
+                        daftar_nama.add(i +""+ nama_lengkap);
                     }
                     edNamaDepan.setText("");
                     edNamaBelakang.setText("");
